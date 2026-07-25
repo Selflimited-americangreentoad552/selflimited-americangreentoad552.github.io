@@ -24,7 +24,7 @@ body, html {
     overflow-y: auto; /* Permite rolagem dentro se o conteúdo for longo */
 }
 
-/* Camada de Sobreposição Escura e de Estilo (Vinheta) */
+/* Camada de Sobreposição Escura e de Estilo (Vinha) */
 .overlay {
     position: absolute;
     top: 0;
@@ -92,7 +92,7 @@ p {
 }
 
 .social-icons a:hover {
-    color: #ff3333;
+    color: #ff0000;
     transform: scale(1.1);
     text-shadow: 0 0 10px #ff0000;
 }
@@ -137,12 +137,14 @@ h2 {
     text-align: left;
 }
 
+/* --- ALTERAÇÃO AQUI: Imagem ajustada para ocupar 100% da largura --- */
 .plot-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%;             /* Ocupa toda a largura do container */
+    max-width: 100%;         /* Garante que não ultrapasse a tela */
+    height: auto;            /* Mantém a proporção da imagem sem achatar */
+    border-radius: 8px;
     margin-bottom: 20px;
-    border: 1px solid #ff3333;
+    border: 1px solid #333;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -163,7 +165,7 @@ h2 {
 .code-container label {
     font-size: 0.9rem;
     margin-bottom: 5px;
-    color: #ff3333;
+    color: #ff0000;
     font-weight: bold;
 }
 
