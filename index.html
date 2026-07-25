@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site de Plotagens de Carros</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Adicionando FontAwesome para ícones de redes sociais -->
+    <title>Meu Site de Plotagens</title>
+    <!-- Ligação corrigida para o arquivo CSS (com S maiúsculo conforme está no seu GitHub) -->
+    <link rel="stylesheet" href="Style.css">
+    <!-- Ícones de redes sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- CONTAINER PRINCIPAL -->
-    <div class="main-container" style="background-image: url('background.jpg');">
+    <!-- CONTAINER COM O FUNDO DO CARRO -->
+    <div class="main-container">
         
-        <!-- PÁGINA 1: BEM-VINDO -->
+        <!-- PÁGINA 1: BOAS-VINDAS -->
         <section id="welcome-page" class="page active-page">
             <div class="overlay">
                 <div class="content">
@@ -21,9 +22,9 @@
                     <p>Explore as melhores plotagens e códigos para seus carros.</p>
                     
                     <div class="social-icons">
-                        <a href="seu_link_instagram_aqui" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="seu_link_tiktok_aqui" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="seu_link_youtube_aqui" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
 
                     <a href="#plot-page" class="btn" id="go-to-plots">Área das Plotagens</a>
@@ -40,17 +41,16 @@
                     
                     <!-- Plotagem 1 -->
                     <div class="plot-item">
-                        <!-- Imagem do Carro 1 - Substitua o link se tiver uma imagem real -->
-                        <img src="https://via.placeholder.com/600x300/111/f00?text=Carro+Plotagem+1" alt="Plotagem Carro 1">
+                        <img src="fundo.jpg" alt="Plotagem Carro 1" class="car-preview">
                         <div class="code-boxes">
                             <div class="code-container">
                                 <label>Corpo do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_1_AQUI</textarea>
+                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_1</textarea>
                                 <button class="copy-btn">Copiar</button>
                             </div>
                             <div class="code-container">
                                 <label>Vidro do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_1_AQUI</textarea>
+                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_1</textarea>
                                 <button class="copy-btn">Copiar</button>
                             </div>
                         </div>
@@ -58,17 +58,16 @@
 
                     <!-- Plotagem 2 -->
                     <div class="plot-item">
-                        <!-- Imagem do Carro 2 - Substitua o link se tiver uma imagem real -->
-                        <img src="https://via.placeholder.com/600x300/111/f00?text=Carro+Plotagem+2" alt="Plotagem Carro 2">
+                        <img src="fundo.jpg" alt="Plotagem Carro 2" class="car-preview">
                         <div class="code-boxes">
                             <div class="code-container">
                                 <label>Corpo do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_2_AQUI</textarea>
+                                <textarea readonly onclick="this.select()">CÓDIGO_CORPO_CARRO_2</textarea>
                                 <button class="copy-btn">Copiar</button>
                             </div>
                             <div class="code-container">
                                 <label>Vidro do Carro</label>
-                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_2_AQUI</textarea>
+                                <textarea readonly onclick="this.select()">CÓDIGO_VIDRO_CARRO_2</textarea>
                                 <button class="copy-btn">Copiar</button>
                             </div>
                         </div>
@@ -77,11 +76,11 @@
                 </div>
             </div>
         </section>
+
     </div>
 
-    <!-- Script Simples para Alternar Páginas e Botão Copiar -->
+    <!-- Script para navegar entre a tela de início e as plotagens -->
     <script>
-        // Alternar páginas
         const welcomePage = document.getElementById('welcome-page');
         const plotPage = document.getElementById('plot-page');
         const goToPlotsBtn = document.getElementById('go-to-plots');
@@ -99,7 +98,7 @@
             welcomePage.classList.add('active-page');
         });
 
-        // Funcionalidade de Botão Copiar
+        // Botão de copiar
         const copyButtons = document.querySelectorAll('.copy-btn');
         copyButtons.forEach(button => {
             button.addEventListener('click', function() {
