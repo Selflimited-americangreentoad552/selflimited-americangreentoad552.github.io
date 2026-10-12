@@ -134,10 +134,12 @@
   @media (max-width: 760px) {
     .hero-grid, .contact-grid { grid-template-columns: 1fr; }
     .gallery, .custom-grid { grid-template-columns: 1fr 1fr; }
-    .navlinks { display: none; }
+    nav.wrap { flex-wrap: wrap; height: auto; padding: 12px 24px; gap: 10px; }
+    .navlinks { display: flex; gap: 16px; font-size: 13px; flex-wrap: wrap; width: 100%; justify-content: center; }
   }
   @media (max-width: 480px) {
     .gallery, .custom-grid { grid-template-columns: 1fr; }
+    .navlinks { gap: 12px; font-size: 12px; }
   }
 </style>
 </head>
