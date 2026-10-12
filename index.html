@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francknos 3D — Impression 3D sur mesure</title>
+<meta name="description" content="Designs d'impression 3D et pièces sur mesure, imprimés sur Bambu Lab P2S. Morbihan, Bretagne.">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #52504a;
+    --surface: #faf8f3;
+    --surface-raised: #ffffff;
+    --border: #e4e0d4;
+    --accent: #c9622a;
+    --accent-ink: #ffffff;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,243,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .brand { font-weight: 700; font-size: 17px; letter-spacing: -0.01em; text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .navlinks { display: flex; gap: 28px; font-size: 14px; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); font-weight: 500; }
+  .navlinks a:hover { color: var(--ink); }
+
+  .hero {
+    padding: 76px 0 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    font-size: clamp(32px, 4.6vw, 48px); line-height: 1.08; letter-spacing: -0.02em;
+    margin: 0 0 18px; font-weight: 700;
+  }
+  .hero p.lede { font-size: 17px; color: var(--ink-soft); max-width: 46ch; margin: 0 0 28px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  }
+  .btn-primary { background: var(--ink); color: var(--surface); }
+  .btn-primary:hover { background: #000; }
+  .btn-ghost { border-color: var(--border); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { border-color: var(--ink-soft); }
+
+  .stat-card {
+    background: var(--surface-raised); border: 1px solid var(--border); border-radius: 12px;
+    padding: 28px;
+  }
+  .stat-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-num { font-family: var(--mono); font-weight: 700; font-size: 20px; }
+  .stat-label { font-size: 13px; color: var(--ink-soft); }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  h2 {
+    font-size: 26px; letter-spacing: -0.01em; margin: 0 0 8px; font-weight: 700;
+  }
+  .section-intro { color: var(--ink-soft); font-size: 15px; margin: 0 0 36px; max-width: 56ch; }
+
+  .gallery {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  .piece {
+    background: var(--surface-raised); border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden;
+  }
+  .piece-thumb {
+    aspect-ratio: 1 / 1; background: #efece3;
+    display: flex; align-items: center; justify-content: center;
+    color: #b7b2a1; font-family: var(--mono); font-size: 12px;
+  }
+  .piece-body { padding: 14px 16px; }
+  .piece-name { font-weight: 600; font-size: 14px; margin: 0 0 4px; }
+  .piece-meta { font-size: 12px; color: var(--ink-soft); font-family: var(--mono); }
+  .piece-link {
+    display: block; padding: 10px 16px; font-size: 13px; font-weight: 600;
+    border-top: 1px solid var(--border); text-decoration: none; color: var(--accent);
+  }
+
+  .custom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .step { }
+  .step-num {
+    font-family: var(--mono); color: var(--accent); font-size: 13px; font-weight: 700; margin-bottom: 10px;
+  }
+  .step h3 { font-size: 16px; margin: 0 0 8px; }
+  .step p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+
+  .pricing-note {
+    margin-top: 32px; padding: 18px 20px; background: var(--surface-raised);
+    border: 1px solid var(--border); border-radius: 10px; font-size: 14px; color: var(--ink-soft);
+  }
+  .pricing-note strong { color: var(--ink); }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .contact-card {
+    background: var(--surface-raised); border: 1px solid var(--border); border-radius: 12px; padding: 28px;
+  }
+  .contact-card h3 { margin: 0 0 6px; font-size: 16px; }
+  .contact-card p { color: var(--ink-soft); font-size: 14px; margin: 0 0 16px; }
+
+  footer {
+    padding: 32px 0 48px; font-size: 13px; color: var(--ink-soft);
+    display: flex; justify-content: space-between;
+  }
+
+  @media (max-width: 760px) {
+    .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+    .gallery, .custom-grid { grid-template-columns: 1fr 1fr; }
+    .navlinks { display: none; }
+  }
+  @media (max-width: 480px) {
+    .gallery, .custom-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav class="wrap">
+    <a href="#" class="brand">francknos<span>3d</span></a>
+    <div class="navlinks">
+      <a href="#galerie">Galerie</a>
+      <a href="#sur-mesure">Sur mesure</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Impression 3D — Bambu Lab P2S — Morbihan</p>
+      <h1>Des pièces imprimées avec précision, du design au sur-mesure.</h1>
+      <p class="lede">Je conçois et imprime des objets fonctionnels et décoratifs en 3D. Plus de 700 téléchargements sur Cults3D, et des commandes personnalisées possibles pour vos projets.</p>
+      <div class="cta-row">
+        <a href="#sur-mesure" class="btn btn-primary">Demander un devis sur mesure</a>
+        <a href="https://cults3d.com/fr/utilisateurs/francknos" class="btn btn-ghost" target="_blank" rel="noopener">Voir le profil Cults3D ↗</a>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-row"><span class="stat-label">Designs publiés</span><span class="stat-num">34</span></div>
+      <div class="stat-row"><span class="stat-label">Téléchargements</span><span class="stat-num">705</span></div>
+      <div class="stat-row"><span class="stat-label">Ventes cumulées</span><span class="stat-num">688 €</span></div>
+      <div class="stat-row"><span class="stat-label">Abonnés Cults3D</span><span class="stat-num">32</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <h2>Galerie</h2>
+    <p class="section-intro">Une sélection de pièces conçues et imprimées. Chaque modèle est disponible à l'achat sur Cults3D, ou imprimable à la demande.</p>
+    <div class="gallery">
+      <div class="piece">
+        <div class="piece-thumb">photo à venir</div>
+        <div class="piece-body">
+          <p class="piece-name">Modèle 1</p>
+          <p class="piece-meta">PLA · à compléter</p>
+        </div>
+        <a href="https://cults3d.com/fr/utilisateurs/francknos" class="piece-link" target="_blank" rel="noopener">Voir sur Cults3D →</a>
+      </div>
+      <div class="piece">
+        <div class="piece-thumb">photo à venir</div>
+        <div class="piece-body">
+          <p class="piece-name">Modèle 2</p>
+          <p class="piece-meta">PLA · à compléter</p>
+        </div>
+        <a href="https://cults3d.com/fr/utilisateurs/francknos" class="piece-link" target="_blank" rel="noopener">Voir sur Cults3D →</a>
+      </div>
+      <div class="piece">
+        <div class="piece-thumb">photo à venir</div>
+        <div class="piece-body">
+          <p class="piece-name">Modèle 3</p>
+          <p class="piece-meta">PLA · à compléter</p>
+        </div>
+        <a href="https://cults3d.com/fr/utilisateurs/francknos" class="piece-link" target="_blank" rel="noopener">Voir sur Cults3D →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sur-mesure">
+  <div class="wrap">
+    <h2>Pièces sur mesure</h2>
+    <p class="section-intro">Vous avez besoin d'une pièce introuvable, d'un support spécifique ou d'un objet personnalisé ? Je conçois et imprime sur devis.</p>
+    <div class="custom-grid">
+      <div class="step">
+        <p class="step-num">01</p>
+        <h3>Décrivez votre besoin</h3>
+        <p>Envoyez une photo, un croquis ou une mesure de la pièce recherchée via le formulaire de contact.</p>
+      </div>
+      <div class="step">
+        <p class="step-num">02</p>
+        <h3>Devis et validation</h3>
+        <p>Je vous propose un prix selon la complexité, le matériau et le temps d'impression estimé.</p>
+      </div>
+      <div class="step">
+        <p class="step-num">03</p>
+        <h3>Impression et livraison</h3>
+        <p>Impression sur Bambu Lab P2S, remise en main propre (secteur Kervignac/Hennebont) ou envoi postal.</p>
+      </div>
+    </div>
+    <div class="pricing-note">
+      <strong>Paiement :</strong> acompte de 30 à 50 % à la validation du devis (lien de paiement en ligne), solde à la livraison. Possibilité de paiement en liquide pour les remises en main propre locales.
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom: none;">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="section-intro">Pour une commande, une question sur un modèle existant ou un projet sur mesure.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Par email</h3>
+        <p>Décrivez votre demande, je réponds généralement sous 48h.</p>
+        <a href="mailto:contact@francknos.example" class="btn btn-primary">Envoyer un email</a>
+      </div>
+      <div class="contact-card">
+        <h3>Sur Cults3D</h3>
+        <p>Parcourez les designs déjà disponibles à l'achat.</p>
+        <a href="https://cults3d.com/fr/utilisateurs/francknos" class="btn btn-ghost" target="_blank" rel="noopener">Voir le profil ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>francknos3d · Impression 3D · Morbihan</span>
+  <span>Bambu Lab P2S</span>
+</footer>
+
+</body>
+</html>
