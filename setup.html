@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon setup — Francknos 3D</title>
+<meta name="description" content="Le setup d'impression 3D : Bambu Lab P2S et stock de filaments.">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #52504a;
+    --surface: #faf8f3;
+    --surface-raised: #ffffff;
+    --border: #e4e0d4;
+    --accent: #c9622a;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--surface); line-height: 1.5; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,243,0.92); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-weight: 700; font-size: 17px; letter-spacing: -0.01em; text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .navlinks { display: flex; gap: 28px; font-size: 14px; }
+  .navlinks a { text-decoration: none; color: var(--ink-soft); font-weight: 500; }
+  .navlinks a:hover, .navlinks a.active { color: var(--ink); }
+
+  section { padding: 64px 0; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 700; }
+  .lede { font-size: 16px; color: var(--ink-soft); max-width: 60ch; margin: 0 0 40px; }
+
+  .setup-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; }
+  .setup-photo { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+  .setup-photo img { width: 100%; display: block; }
+
+  .spec-card { background: var(--surface-raised); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+  .spec-card h3 { margin: 0 0 16px; font-size: 16px; }
+  .spec-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-label { color: var(--ink-soft); }
+  .spec-val { font-family: var(--mono); font-weight: 600; text-align: right; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    text-decoration: none; border: 1px solid var(--border); color: var(--ink); background: transparent;
+  }
+  .btn:hover { border-color: var(--ink-soft); }
+
+  footer { padding: 32px 0 48px; font-size: 13px; color: var(--ink-soft); display: flex; justify-content: space-between; }
+
+  @media (max-width: 760px) {
+    .setup-grid { grid-template-columns: 1fr; }
+    .navlinks { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav class="wrap">
+    <a href="index.html" class="brand">francknos<span>3d</span></a>
+    <div class="navlinks">
+      <a href="index.html#galerie">Galerie</a>
+      <a href="index.html#sur-mesure">Sur mesure</a>
+      <a href="setup.html" class="active">Mon setup</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="wrap setup-grid">
+    <div class="setup-photo">
+      <img src="img/setup.jpg" alt="Setup d'impression 3D : Bambu Lab P2S et stock de filaments">
+    </div>
+    <div>
+      <p class="eyebrow">L'atelier</p>
+      <h1>Mon setup d'impression</h1>
+      <p class="lede">Toutes les pièces du site sont conçues et imprimées ici, sur une Bambu Lab P2S avec système multi-couleurs AMS, à côté d'un stock de filaments classé par teinte.</p>
+      <div class="spec-card">
+        <h3>Matériel</h3>
+        <div class="spec-row"><span class="spec-label">Imprimante</span><span class="spec-val">Bambu Lab P2S</span></div>
+        <div class="spec-row"><span class="spec-label">Système couleurs</span><span class="spec-val">AMS (multi-bobines)</span></div>
+        <div class="spec-row"><span class="spec-label">Matériau principal</span><span class="spec-val">PLA</span></div>
+        <div class="spec-row"><span class="spec-label">Stock filaments</span><span class="spec-val">10+ coloris</span></div>
+      </div>
+      <p style="margin-top:28px;">
+        <a href="index.html#contact" class="btn">Discuter d'un projet →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>francknos3d · Impression 3D · Morbihan</span>
+  <span>Bambu Lab P2S</span>
+</footer>
+
+</body>
+</html>
