@@ -77,7 +77,7 @@
   .color-table th { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--ink-soft); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
   .color-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
   .color-table tr:last-child td { border-bottom: none; }
-  .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); margin-right: 8px; vertical-align: middle; }
+  .swatch { display: inline-block; width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); margin-right: 10px; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,0.04); }
   .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
   .status.ok { background: #e4f3e6; color: #1f7a33; }
   .status.out { background: #f5e4e0; color: #a43c22; }
@@ -130,7 +130,7 @@
         <h3>Matériel</h3>
         <div class="spec-row"><span class="spec-label">Imprimante</span><span class="spec-val">Bambu Lab P2S</span></div>
         <div class="spec-row"><span class="spec-label">Système couleurs</span><span class="spec-val">AMS (multi-bobines)</span></div>
-        <div class="spec-row"><span class="spec-label">Matériaux</span><span class="spec-val">PLA · PETG</span></div>
+        <div class="spec-row"><span class="spec-label">Matériaux</span><span class="spec-val"><a href="#mat-pla" style="color:var(--accent);text-decoration:underline;">PLA</a> · <a href="#mat-petg" style="color:var(--accent);text-decoration:underline;">PETG</a></span></div>
         <div class="spec-row"><span class="spec-label">Stock filaments</span><span class="spec-val">16 coloris</span></div>
       </div>
       <p style="margin-top:28px;">
@@ -146,7 +146,7 @@
     <h1 style="font-size:28px;">Quel matériau pour ton projet ?</h1>
     <p class="lede">Clique sur un matériau pour voir ses avantages et inconvénients.</p>
     <div class="mat-grid">
-      <details class="mat-card" open>
+      <details class="mat-card" id="mat-pla" open>
         <summary>
           <div class="mat-head">
             <span class="mat-name">PLA</span>
@@ -170,7 +170,7 @@
           </ul>
         </div>
       </details>
-      <details class="mat-card">
+      <details class="mat-card" id="mat-petg">
         <summary>
           <div class="mat-head">
             <span class="mat-name">PETG</span>
